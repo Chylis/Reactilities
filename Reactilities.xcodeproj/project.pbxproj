@@ -10,6 +10,8 @@
 		5F2CA4C81D1D493F0041BFE8 /* Reactilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F2CA4C71D1D493F0041BFE8 /* Reactilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F2CA4CF1D1D493F0041BFE8 /* Reactilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2CA4C41D1D493F0041BFE8 /* Reactilities.framework */; };
 		5F2CA4D41D1D493F0041BFE8 /* ReactilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2CA4D31D1D493F0041BFE8 /* ReactilitiesTests.swift */; };
+		5F2CA51C1D1D4C490041BFE8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2CA51A1D1D4C490041BFE8 /* ReactiveCocoa.framework */; };
+		5F2CA51D1D1D4C490041BFE8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2CA51B1D1D4C490041BFE8 /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		5F2CA4CE1D1D493F0041BFE8 /* ReactilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F2CA4D31D1D493F0041BFE8 /* ReactilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactilitiesTests.swift; sourceTree = "<group>"; };
 		5F2CA4D51D1D493F0041BFE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F2CA51A1D1D4C490041BFE8 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		5F2CA51B1D1D4C490041BFE8 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F2CA51C1D1D4C490041BFE8 /* ReactiveCocoa.framework in Frameworks */,
+				5F2CA51D1D1D4C490041BFE8 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +59,8 @@
 		5F2CA4BA1D1D493E0041BFE8 = {
 			isa = PBXGroup;
 			children = (
+				5F2CA51A1D1D4C490041BFE8 /* ReactiveCocoa.framework */,
+				5F2CA51B1D1D4C490041BFE8 /* Result.framework */,
 				5F2CA4C61D1D493F0041BFE8 /* Reactilities */,
 				5F2CA4D21D1D493F0041BFE8 /* ReactilitiesTests */,
 				5F2CA4C51D1D493F0041BFE8 /* Products */,
@@ -71,6 +79,7 @@
 		5F2CA4C61D1D493F0041BFE8 /* Reactilities */ = {
 			isa = PBXGroup;
 			children = (
+				5F2CA5191D1D4AF80041BFE8 /* Source */,
 				5F2CA4C71D1D493F0041BFE8 /* Reactilities.h */,
 				5F2CA4C91D1D493F0041BFE8 /* Info.plist */,
 			);
@@ -84,6 +93,13 @@
 				5F2CA4D51D1D493F0041BFE8 /* Info.plist */,
 			);
 			path = ReactilitiesTests;
+			sourceTree = "<group>";
+		};
+		5F2CA5191D1D4AF80041BFE8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +330,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Reactilities/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -330,6 +350,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Reactilities/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -378,6 +402,7 @@
 				5F2CA4DA1D1D493F0041BFE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F2CA4DB1D1D493F0041BFE8 /* Build configuration list for PBXNativeTarget "ReactilitiesTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +411,7 @@
 				5F2CA4DD1D1D493F0041BFE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
