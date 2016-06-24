@@ -10,8 +10,7 @@
 		5F2CA4C81D1D493F0041BFE8 /* Reactilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F2CA4C71D1D493F0041BFE8 /* Reactilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F2CA4CF1D1D493F0041BFE8 /* Reactilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2CA4C41D1D493F0041BFE8 /* Reactilities.framework */; };
 		5F2CA4D41D1D493F0041BFE8 /* ReactilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2CA4D31D1D493F0041BFE8 /* ReactilitiesTests.swift */; };
-		5F2CA51C1D1D4C490041BFE8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2CA51A1D1D4C490041BFE8 /* ReactiveCocoa.framework */; };
-		5F2CA51D1D1D4C490041BFE8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2CA51B1D1D4C490041BFE8 /* Result.framework */; };
+		5F2CA51F1D1D4DA50041BFE8 /* CLLocationManager+Reactilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2CA51E1D1D4DA50041BFE8 /* CLLocationManager+Reactilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +32,7 @@
 		5F2CA4D51D1D493F0041BFE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F2CA51A1D1D4C490041BFE8 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		5F2CA51B1D1D4C490041BFE8 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		5F2CA51E1D1D4DA50041BFE8 /* CLLocationManager+Reactilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Reactilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,8 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F2CA51C1D1D4C490041BFE8 /* ReactiveCocoa.framework in Frameworks */,
-				5F2CA51D1D1D4C490041BFE8 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +96,7 @@
 		5F2CA5191D1D4AF80041BFE8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				5F2CA51E1D1D4DA50041BFE8 /* CLLocationManager+Reactilities.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -210,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F2CA51F1D1D4DA50041BFE8 /* CLLocationManager+Reactilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +326,7 @@
 		5F2CA4D91D1D493F0041BFE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -336,16 +337,19 @@
 				);
 				INFOPLIST_FILE = Reactilities/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.magmag.Reactilities;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		5F2CA4DA1D1D493F0041BFE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -356,6 +360,7 @@
 				);
 				INFOPLIST_FILE = Reactilities/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.magmag.Reactilities;
 				PRODUCT_NAME = "$(TARGET_NAME)";
