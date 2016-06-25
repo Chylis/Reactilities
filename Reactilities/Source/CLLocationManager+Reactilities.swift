@@ -9,12 +9,12 @@
 import CoreLocation
 import ReactiveCocoa
 
-extension CLLocationManager {
+public extension CLLocationManager {
     
     //MARK: Public
     
     ///Creates and returns a SignalProducer which delivers a next event every time the authorization status is changed
-    public func rac_authStatusChangedSignalProducer() -> SignalProducer<CLAuthorizationStatus, NSError> {
+    func rac_authStatusChangedSignalProducer() -> SignalProducer<CLAuthorizationStatus, NSError> {
         ensureDelegateExists()
         
         return rac_signalForSelector(#selector(CLLocationManagerDelegate.locationManager(_:didChangeAuthorizationStatus:)),
@@ -31,7 +31,7 @@ extension CLLocationManager {
     }
     
     ///Creates and returns a SignalProducer which delivers a next event every time the location is updated
-    public func rac_locationUpdatedSignalProducer() -> SignalProducer<[CLLocation], NSError> {
+    func rac_locationUpdatedSignalProducer() -> SignalProducer<[CLLocation], NSError> {
         ensureDelegateExists()
         
         return rac_signalForSelector(#selector(CLLocationManagerDelegate.locationManager(_:didUpdateLocations:)),
@@ -42,8 +42,10 @@ extension CLLocationManager {
                 return tuple.second as! [CLLocation]
         }
     }
-    
-    
+}
+
+extension CLLocationManager: CLLocationManagerDelegate {
+
     //MARK: Private
     
     //Ensures that a delegate is set, else sets ourselves as delegate.
@@ -54,6 +56,3 @@ extension CLLocationManager {
         }
     }
 }
-
-
-extension CLLocationManager: CLLocationManagerDelegate {}

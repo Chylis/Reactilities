@@ -11,6 +11,8 @@
 		5F2CA4CF1D1D493F0041BFE8 /* Reactilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2CA4C41D1D493F0041BFE8 /* Reactilities.framework */; };
 		5F2CA4D41D1D493F0041BFE8 /* ReactilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2CA4D31D1D493F0041BFE8 /* ReactilitiesTests.swift */; };
 		5F2CA51F1D1D4DA50041BFE8 /* CLLocationManager+Reactilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2CA51E1D1D4DA50041BFE8 /* CLLocationManager+Reactilities.swift */; };
+		5F6CD0311D1E7452000D73EB /* SignalProducer+VoidSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6CD0301D1E7452000D73EB /* SignalProducer+VoidSignal.swift */; };
+		5F6CD0331D1E77B8000D73EB /* NSTimer+Reactilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6CD0321D1E77B8000D73EB /* NSTimer+Reactilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		5F2CA51A1D1D4C490041BFE8 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		5F2CA51B1D1D4C490041BFE8 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		5F2CA51E1D1D4DA50041BFE8 /* CLLocationManager+Reactilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Reactilities.swift"; sourceTree = "<group>"; };
+		5F6CD0301D1E7452000D73EB /* SignalProducer+VoidSignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignalProducer+VoidSignal.swift"; sourceTree = "<group>"; };
+		5F6CD0321D1E77B8000D73EB /* NSTimer+Reactilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Reactilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				5F2CA51E1D1D4DA50041BFE8 /* CLLocationManager+Reactilities.swift */,
+				5F6CD0301D1E7452000D73EB /* SignalProducer+VoidSignal.swift */,
+				5F6CD0321D1E77B8000D73EB /* NSTimer+Reactilities.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -210,6 +216,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F2CA51F1D1D4DA50041BFE8 /* CLLocationManager+Reactilities.swift in Sources */,
+				5F6CD0311D1E7452000D73EB /* SignalProducer+VoidSignal.swift in Sources */,
+				5F6CD0331D1E77B8000D73EB /* NSTimer+Reactilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
